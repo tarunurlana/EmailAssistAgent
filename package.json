@@ -1,0 +1,45 @@
+{
+  "name": "gmail-organizer-agent",
+  "version": "1.0.0",
+  "description": "Personal Gmail organizer with secure local OAuth and rule-based classification",
+  "type": "module",
+  "main": "dist/mcp-server.js",
+  "bin": {
+    "gmail-organizer": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/mcp-server.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "node dist/mcp-server.js",
+    "login": "node dist/cli.js login",
+    "logout": "node dist/cli.js logout",
+    "status": "node dist/cli.js status",
+    "classify": "node dist/cli.js classify",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "keywords": [
+    "gmail",
+    "email",
+    "classification",
+    "mcp",
+    "agent"
+  ],
+  "author": "Tarun Uralana",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "googleapis": "^176.0.0",
+    "keytar": "^7.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}

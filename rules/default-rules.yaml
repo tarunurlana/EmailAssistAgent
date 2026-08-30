@@ -1,0 +1,112 @@
+OTP:
+  priority: 100
+  patterns:
+    - "verification code"
+    - "2fa"
+    - "two factor"
+    - "otp"
+    - "confirm your identity"
+    - "code.*\\d{4,6}"
+
+Bank Account:
+  priority: 90
+  senders:
+    - "@hdfc.com"
+    - "@icici.com"
+    - "@axis.com"
+    - "@sbi.co.in"
+  patterns:
+    - "statement"
+    - "account alert"
+    - "transaction"
+    - "kyc"
+
+Bank Promotional:
+  priority: 85
+  senders:
+    - "@hdfc.com"
+    - "@icici.com"
+    - "@axis.com"
+    - "@sbi.co.in"
+  patterns:
+    - "offer"
+    - "promotional"
+    - "limited time"
+    - "exclusive"
+    - "credit card"
+
+Finance & Stocks:
+  priority: 80
+  senders:
+    - "@zerodha.com"
+    - "@groww.in"
+    - "@icicidirect.com"
+    - "@bseindia.com"
+  patterns:
+    - "dividend"
+    - "stock"
+    - "portfolio"
+    - "ipo"
+    - "broker"
+    - "cas"
+
+Invoices & Orders:
+  priority: 75
+  patterns:
+    - "invoice"
+    - "order confirmation"
+    - "receipt"
+    - "bill"
+    - "purchase"
+
+Travel:
+  priority: 70
+  senders:
+    - "@makemytrip.com"
+    - "@cleartrip.com"
+    - "@airbnb.com"
+  patterns:
+    - "booking"
+    - "flight"
+    - "hotel"
+    - "itinerary"
+    - "confirmation"
+
+Microsoft Work:
+  priority: 65
+  senders:
+    - "@microsoft.com"
+    - "@outlook.com"
+
+Amdocs Work:
+  priority: 60
+  senders:
+    - "@amdocs.com"
+
+Jobs & Recruiters:
+  priority: 55
+  patterns:
+    - "job"
+    - "offer"
+    - "interview"
+    - "application"
+    - "recruiter"
+    - "linkedin"
+
+Promotions:
+  priority: 20
+  hasListUnsubscribe: true
+  patterns:
+    - "sale"
+    - "discount"
+    - "offer"
+    - "limited time"
+    - "newsletter"
+    - "marketing"
+
+Spam:
+  priority: 10
+  patterns:
+    - "unsubscribe" # Bulk mail indicator
+    - "you have.*won" # Common spam
+    - "congratulations.*claim" # Scam
